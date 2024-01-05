@@ -5,15 +5,15 @@ const lastMonthElement = document.querySelector(".spendings__amount--last-month"
 const amountElements = Array.from(document.querySelectorAll(".spendings__amount--daily"));
 const barElements = Array.from(document.querySelectorAll(".spendings__bar"));
 const maxBarHeight = 9.5;
-const highestBarColor = "hsl(186, 34%, 60%)";
+const todayBarColor = "hsl(186, 34%, 60%)";
 
 function renderSpendings(path) {
     fetch(path)
         .then((response) => response.json())
         .then((data) => {
-            const dailyData = data.dailyAmounts;
-            const days = Object.keys(dailyData);
-            const amounts = Object.values(dailyData);
+            const weekData = data.weekData;
+            const days = Object.keys(weekData);
+            const amounts = Object.values(weekData);
 
             balanceElement.textContent = `$${data["balance"]}`;
             monthTotalElement.textContent = `$${data["month"]}`;
@@ -29,12 +29,18 @@ function renderSpendings(path) {
 
             barElements.forEach((element) => {
                 let barDay = element.classList[1].slice(16); // Extract the day from the class name (16 is the starting index)
-                let barAmount = dailyData[barDay];
+                let barAmount = weekData[barDay];
 
                 if (barAmount === highestWeekAmount) {
-                    element.style.backgroundColor = highestBarColor;
                     element.style.height = `${maxBarHeight}em`;
                 } else {
+                    let date = new Date();
+                    let currentDay = date.toLocaleDateString("en-us", { weekday: "long" });
+
+                    if (barDay === currentDay.toLowerCase()) {
+                        element.style.backgroundColor = todayBarColor;
+                    }
+
                     let barPercentage = barAmount / highestWeekAmount;
                     let barHeight = maxBarHeight * barPercentage;
                     element.style.height = `${barHeight}em`;
