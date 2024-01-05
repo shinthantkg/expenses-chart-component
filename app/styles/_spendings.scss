@@ -24,17 +24,24 @@
     }
   }
 
+  &__day-container {
+    width: 1.875em;
+  }
+
   &__bar {
     background-color: $soft-red;
     border-radius: 0.3125em;
     width: $bar-width;
-    height: 9.5em;
     margin-bottom: 0.625em;
     transition: cursor 0.2s ease-in, opacity 0.2s ease-in;
 
     &:hover {
       cursor: pointer;
       opacity: 0.8;
+    }
+
+    @media only screen and (max-width: 34.375em) {
+      width: 100%;
     }
   }
 

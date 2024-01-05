@@ -26,7 +26,6 @@ function renderSpendings(path) {
             amounts.sort((a, b) => b - a);
 
             const highestWeekAmount = amounts[0];
-            console.log(amounts);
 
             barElements.forEach((element) => {
                 let barDay = element.classList[1].slice(16); // Extract the day from the class name (16 is the starting index)

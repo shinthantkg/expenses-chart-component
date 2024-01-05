@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 *,
@@ -14,9 +15,9 @@ body {
   color: hsl(28, 10%, 53%);
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
-  height: 100vh;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 hr {
@@ -47,10 +48,18 @@ hr {
   align-items: center;
 }
 
+.wrapper {
+  width: 30em;
+}
+@media only screen and (max-width: 34.375em) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 .container {
   border-radius: 1.25em;
   padding: 0.9375em 1.875em;
-  width: 30em;
 }
 .container-gap {
   row-gap: 1.5625em;
@@ -63,7 +72,6 @@ hr {
 .balance {
   background-color: hsl(10, 79%, 65%);
   color: hsl(33, 100%, 98%);
-  width: 100%;
 }
 .balance__title {
   font-size: 1rem;
@@ -96,17 +104,24 @@ hr {
 .spendings__title--last-month {
   margin-top: 0;
 }
+.spendings__day-container {
+  width: 1.875em;
+}
 .spendings__bar {
   background-color: hsl(10, 79%, 65%);
   border-radius: 0.3125em;
   width: 3.125em;
-  height: 9.5em;
   margin-bottom: 0.625em;
   transition: cursor 0.2s ease-in, opacity 0.2s ease-in;
 }
 .spendings__bar:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+@media only screen and (max-width: 34.375em) {
+  .spendings__bar {
+    width: 100%;
+  }
 }
 .spendings__amount {
   color: hsl(25, 47%, 15%);

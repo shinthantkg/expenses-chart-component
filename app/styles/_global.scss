@@ -3,6 +3,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 *,
@@ -16,9 +17,9 @@ body {
   color: $medium-brown;
   font-family: $font;
   font-weight: $fw-reg;
-  height: 100vh;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 hr {
@@ -56,10 +57,17 @@ hr {
   }
 }
 
+.wrapper {
+  width: $wrapper-width;
+
+  @media only screen and (max-width: 34.375em) {
+    width: 100%;
+  }
+}
+
 .container {
   border-radius: $container-border-radius;
   padding: $container-padding;
-  width: $container-width;
 
   &-gap {
     row-gap: 1.5625em;
