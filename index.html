@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Shin Thant Kaung" />
+    <meta
+      name="description"
+      content="An expenses chart component built using HTML, SCSS and JavaScript."
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./app/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap" rel="stylesheet">
+
+    <script src="./app/js/index.js" defer></script>
+
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body class="flex flex-jc-c flex-ai-c">
+    <main>
+      <section>
+        <div class="flex flex-fd-c container-gap">
+          <header class="balance container flex flex-jc-sb">
+            <div class="flex flex-fd-c">
+              <h1 class="balance__title">My balance</h1>
+              <p class="balance__amount" aria-live="polite"></p>
+            </div>
+
+            <img
+              src="./images/logo.svg"
+              alt="PayMate Inc."
+              aria-hidden="true"
+            />
+          </header>
+
+          <div class="spendings container info flex flex-fd-c">
+            <h2 class="spendings__title spendings__title--week">Spending - Last 7 days</h2>
+
+            <div class="flex flex-jc-sb">
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-mon hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--monday" role="img" aria-label="Monday"></div>
+                  <span>mon</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-tue hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--tuesday" role="img" aria-label="Tuesday"></div>
+                  <span>tue</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-wed hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--wednesday" role="img" aria-label="Wednesday"></div>
+                  <span>wed</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-thu hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--thursday" role="img" aria-label="Thursday"></div>
+                  <span>thu</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-fri hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--friday" role="img" aria-label="Friday"></div>
+                  <span>fri</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-sat hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--saturday" role="img" aria-label="Saturday"></div>
+                  <span>sat</span>
+                </div>
+              </div>
+              <div class="flex flex-fd-c flex-jc-fe flex-ai-c">
+                <span class="spendings__amount--daily spendings__amount--daily-sun hidden"></span>
+                <div class="flex flex-fd-c flex-ai-c">
+                  <div class="spendings__bar spendings__bar--sunday" role="img" aria-label="Sunday"></div>
+                  <span>sun</span>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="flex flex-jc-sb flex-ai-c">
+              <div class="flex flex-fd-c">
+                <h3 class="spendings__title spendings__title--month">Total this month</h3>
+                <p class="spendings__amount spendings__amount--month"></p>
+              </div>
+              <div class="flex flex-fd-cr">
+                <h3 class="spendings__title spendings__title--last-month">from last month</h3>
+                <p class="spendings__amount spendings__amount--last-month"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

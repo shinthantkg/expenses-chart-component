@@ -1,0 +1,65 @@
+@import "variables";
+
+.spendings {
+  background-color: $very-pale-orange;
+
+  &__title {
+    font-size: $fs-sm;
+    font-weight: $fw-reg;
+
+    &--week {
+      color: $dark-brown;
+      font-size: $fs-med;
+      font-weight: $fw-bold;
+      margin-bottom: 7%;
+    }
+
+    &--month {
+      color: $medium-brown;
+      margin-bottom: 0;
+    }
+
+    &--last-month {
+      margin-top: 0;
+    }
+  }
+
+  &__bar {
+    background-color: $soft-red;
+    border-radius: 0.3125em;
+    width: $bar-width;
+    height: 9.5em;
+    margin-bottom: 0.625em;
+    transition: cursor 0.2s ease-in, opacity 0.2s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+
+  &__amount {
+    color: $dark-brown;
+    font-weight: $fw-bold;
+
+    &--daily {
+      background-color: $dark-brown;
+      border-radius: 0.3125em;
+      color: $very-pale-orange;
+      font-weight: $fw-bold;
+      margin-bottom: 0.5em;
+      padding: 0.625em 0.3125em;
+    }
+
+    &--month {
+      font-size: $fs-lg;
+      margin-top: 0;
+      margin-bottom: 1.875rem;
+    }
+
+    &--last-month {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+}

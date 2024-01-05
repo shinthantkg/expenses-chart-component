@@ -1,0 +1,133 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  color: hsl(28, 10%, 53%);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: 2px solid hsl(27, 66%, 92%);
+  margin-top: 1.5625em;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+.flex-fd-c {
+  flex-direction: column;
+}
+.flex-fd-cr {
+  flex-direction: column-reverse;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-fe {
+  justify-content: flex-end;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.container {
+  border-radius: 1.25em;
+  padding: 0.9375em 1.875em;
+  width: 30em;
+}
+.container-gap {
+  row-gap: 1.5625em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.balance {
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+  width: 100%;
+}
+.balance__title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0.83em 0 0.625em 0;
+}
+.balance__amount {
+  margin: 0 0 0.625em;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+
+.spendings {
+  background-color: hsl(33, 100%, 98%);
+}
+.spendings__title {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.spendings__title--week {
+  color: hsl(25, 47%, 15%);
+  font-size: 1.5625rem;
+  font-weight: 700;
+  margin-bottom: 7%;
+}
+.spendings__title--month {
+  color: hsl(28, 10%, 53%);
+  margin-bottom: 0;
+}
+.spendings__title--last-month {
+  margin-top: 0;
+}
+.spendings__bar {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 0.3125em;
+  width: 3.125em;
+  height: 9.5em;
+  margin-bottom: 0.625em;
+  transition: cursor 0.2s ease-in, opacity 0.2s ease-in;
+}
+.spendings__bar:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.spendings__amount {
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+}
+.spendings__amount--daily {
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 0.3125em;
+  color: hsl(33, 100%, 98%);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  padding: 0.625em 0.3125em;
+}
+.spendings__amount--month {
+  font-size: 2.8125rem;
+  margin-top: 0;
+  margin-bottom: 1.875rem;
+}
+.spendings__amount--last-month {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+/*# sourceMappingURL=style.css.map */
