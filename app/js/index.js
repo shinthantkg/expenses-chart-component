@@ -19,8 +19,8 @@ function renderSpendings(path) {
             monthTotalElement.textContent = `$${data["month"]}`;
             lastMonthElement.textContent = data["difference"];
 
-            amountElements.forEach((element) => {
-                element.textContent = `$${amounts[amountElements.indexOf(element)]}`    ;
+            amountElements.forEach((element, index) => {
+                element.textContent = `$${amounts[index]}`;
             });
 
             amounts.sort((a, b) => b - a);
